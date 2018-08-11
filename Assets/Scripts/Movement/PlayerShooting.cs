@@ -26,7 +26,7 @@ public class PlayerShooting : MonoBehaviour {
         if (Input.GetMouseButton(0)&&Time.time-lastTimeFired>firerate)//shooting
         {
             Vector3 spawnPos = transform.GetChild(0).position;
-            Instantiate(Projectiles[currWeap], spawnPos, transform.rotation);
+            Instantiate(Projectiles[currWeap], spawnPos, transform.rotation * Quaternion.Euler(0, 180, 0));
 
             lastTimeFired = Time.time;
         }
@@ -75,7 +75,7 @@ public class PlayerShooting : MonoBehaviour {
             Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
 
             // Smoothly rotate towards the target point.
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation * Quaternion.Euler(0, 180, 0), speed * Time.deltaTime);
         }
     }
 }
