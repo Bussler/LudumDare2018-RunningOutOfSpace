@@ -11,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerShooting.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerShooting.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Movement/PlayerShooting.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -32,18 +32,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Glow.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Glow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding>
+                <marker date="1533992530516" expanded="false" signature="6:78" ph="..." />
+                <marker date="1533992530516" expanded="true" signature="114:1422" ph="{...}" />
+                <marker date="1533992530516" expanded="true" signature="354:603" ph="{...}" />
+                <marker date="1533992530516" expanded="true" signature="661:1420" ph="{...}" />
+                <marker date="1533992530516" expanded="true" signature="696:1021" ph="{...}" />
+                <marker date="1533992530516" expanded="true" signature="967:1004" ph="{...}" />
+                <marker date="1533992530516" expanded="true" signature="1364:1400" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Glow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/PlayerShooting.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/PlayerShooting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Effects/Glow.cs" />
       </list>
     </option>
   </component>
@@ -119,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1533986258793</updated>
       <workItem from="1533986266324" duration="46000" />
-      <workItem from="1533986366046" duration="203000" />
+      <workItem from="1533986366046" duration="2035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249000" />
+    <option name="totallyTimeSpent" value="2081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -208,6 +228,22 @@
             <marker date="1533986568447" expanded="true" signature="1411:2826" ph="{...}" />
             <marker date="1533986568447" expanded="true" signature="1712:2098" ph="/* Determine the point where the cursor ray intersects the plane. ... */" />
             <marker date="1533986568447" expanded="true" signature="2254:2820" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Effects/Glow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <marker date="1533992530516" expanded="false" signature="6:78" ph="..." />
+            <marker date="1533992530516" expanded="true" signature="114:1422" ph="{...}" />
+            <marker date="1533992530516" expanded="true" signature="354:603" ph="{...}" />
+            <marker date="1533992530516" expanded="true" signature="661:1420" ph="{...}" />
+            <marker date="1533992530516" expanded="true" signature="696:1021" ph="{...}" />
+            <marker date="1533992530516" expanded="true" signature="967:1004" ph="{...}" />
+            <marker date="1533992530516" expanded="true" signature="1364:1400" ph="{...}" />
           </folding>
         </state>
       </provider>
