@@ -6,6 +6,7 @@ public class WallSpawning : MonoBehaviour {
 
     public float SpawnRate;
     private float lastSpawn;
+    public GameObject wall;
 
 	// Use this for initialization
 	void Start () {
@@ -25,19 +26,7 @@ public class WallSpawning : MonoBehaviour {
     {
         if (Time.time-lastSpawn>SpawnRate)
         {
-            Debug.Log("Casting");
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position,Vector3.down, out hit, Mathf.Infinity)){
-                    if (hit.collider.tag == "Player" || hit.collider.tag == "Ground")
-                    {
-                        Debug.Log("Success");
-                        //break;
-                    }
-                }
-
-
-
-            lastSpawn = Time.time;
+            StartCoroutine("SearchPos");
         }
     }
 
@@ -50,6 +39,26 @@ public class WallSpawning : MonoBehaviour {
         {
             Debug.Log(hitPoint.collider.tag);
         }
+    }
+
+    IEnumerator SearchPos()
+    {
+       for(int i=0;i<5;i++)
+        {
+            Debug.Log("Casting");
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
+            {
+                if (hit.collider.tag == "Player" || hit.collider.tag == "Ground")
+                {
+                    Debug.Log("Success");
+                    Instantiate(wall, transform.position, Quaternion.identity);
+                    break;
+                }
+            }
+        }
+        lastSpawn = Time.time;
+        yield return null;
     }
 
 }
