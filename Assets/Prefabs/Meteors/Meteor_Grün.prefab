@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4293893980892346}
   m_Layer: 0
-  m_Name: "MeteorGr\xFCn"
+  m_Name: "Meteor_Gr\xFCn"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

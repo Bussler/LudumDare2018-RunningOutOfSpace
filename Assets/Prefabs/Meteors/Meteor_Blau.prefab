@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4993075647792950}
   - component: {fileID: 33420132857455516}
   - component: {fileID: 23618165930676564}
+  - component: {fileID: 114588099212610848}
   m_Layer: 0
   m_Name: Meteor_Blau
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565766737800606}
   m_Mesh: {fileID: 4300000, guid: 1c62e497945384e42b42ee106886e4e5, type: 3}
+--- !u!114 &114588099212610848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565766737800606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bb1e312650bb74a8ca506a5c4d81f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destColor: {r: 0, g: 0, b: 0, a: 0}

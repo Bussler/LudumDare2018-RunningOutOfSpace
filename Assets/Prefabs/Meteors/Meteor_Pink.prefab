@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4775403776269600}
   - component: {fileID: 33117138893092746}
   - component: {fileID: 23464610308799384}
+  - component: {fileID: 114720601145878462}
   m_Layer: 0
   m_Name: Meteor_Pink
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753278987017934}
   m_Mesh: {fileID: 4300000, guid: 258da2a9f0b48b74f8f2d8dab4652b56, type: 3}
+--- !u!114 &114720601145878462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1753278987017934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bb1e312650bb74a8ca506a5c4d81f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destColor: {r: 0, g: 0, b: 0, a: 0}
