@@ -24,7 +24,7 @@ public class WallSpawning : MonoBehaviour {
 
     private void FixedUpdate()//randomly get position and spawn wall there
     {
-        if (Time.time-lastSpawn>SpawnRate)
+        if (Time.time-lastSpawn>SpawnRate&&(MyGameManager.level==0||MyGameManager.level==3))
         {
             StartCoroutine("SearchPos");
         }
@@ -45,14 +45,18 @@ public class WallSpawning : MonoBehaviour {
     {
        for(int i=0;i<5;i++)
         {
-            Debug.Log("Casting");
+            int randX=(int)Random.Range(-13,13);
+            int randZ=(int)Random.Range(-13,13);
+            gameObject.transform.position = new Vector3(randX, transform.position.y, randZ);
+
+           // Debug.Log("Casting");
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
             {
                 if (hit.collider.tag == "Player" || hit.collider.tag == "Ground")
                 {
-                    Debug.Log("Success");
-                    Instantiate(wall, transform.position, Quaternion.identity);
+                    //Debug.Log("Success");
+                    Instantiate(wall, transform.GetChild(0).position, Quaternion.identity);
                     break;
                 }
             }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PProjectile : MonoBehaviour {
 
     public float speed;
+    public int dmg;
    
 	// Use this for initialization
 	void Start () {
@@ -15,11 +16,21 @@ public class PProjectile : MonoBehaviour {
 	void Update () {
         float amtToMove = speed * Time.deltaTime;
         transform.Translate(Vector3.forward * amtToMove);
+
+        if (!transform.GetChild(0).GetComponent<Renderer>().isVisible)
+        {
+            destroy();
+        }
     }
 
     public void destroy()
     {
         Destroy(gameObject);
+    }
+
+    private void OnBecameInvisible()
+    {
+        destroy();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,14 +40,16 @@ public class PProjectile : MonoBehaviour {
             destroy();
         }
 
-        if (other.tag=="EnemyDestroyShot")
+        if (other.tag=="EnemyDestroyShot"&&gameObject.tag=="PlayerShot")
         {
-            //destroy other shot
+            other.gameObject.GetComponent<EProjectile>().destroy();
         }
 
         if (other.tag=="Enemy")
         {
-
+            //Debug.Log("Hit");
+            other.gameObject.GetComponent<EnemyHandle>().e_health -= dmg;
+            destroy();
         }
 
     }
